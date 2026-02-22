@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { padding: 16px; font-family: -apple-system, system-ui, sans-serif; background: #fff; color: #202124; }
+    h3 { display: flex; align-items: center; gap: 8px; color: #1a73e8; font-size: 18px; margin: 0 0 16px 0; padding-bottom: 12px; border-bottom: 1px solid #f1f3f4; }
+    .field { margin-bottom: 14px; }
+    label.title { display: block; font-size: 11px; color: #5f6368; font-weight: bold; margin-bottom: 6px; text-transform: uppercase; }
+    input, textarea { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important; width: 100%; padding: 10px; border: 1px solid #dadce0; border-radius: 8px; box-sizing: border-box; font-size: 14px; outline: none; transition: border-color 0.2s; }
+    input::placeholder, textarea::placeholder { color: #80868b !important; font-family: inherit; opacity: 1; }
+    input:focus, textarea:focus { border-color: #1a73e8; }
+    .toggle-container { display: flex; align-items: center; margin: 18px 0; cursor: pointer; user-select: none; width: fit-content; }
+    .toggle-container input { width: 18px; height: 18px; margin: 0 10px 0 0; cursor: pointer; flex-shrink: 0; }
+    .toggle-text { font-size: 13px; color: #3c4043; font-weight: 500; line-height: 1; white-space: nowrap; }
+    .btn-group { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+    button { width: 100%; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    #copy-btn { background: #1a73e8; color: white; border: none; }
+    #copy-btn:hover { background: #1765cc; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    #jump-btn { background: white; color: #1a73e8; border: 1px solid #dadce0; }
+    #jump-btn:hover { background: #f8f9fa; border-color: #1a73e8; }
+    
+    .hint { font-size: 11px; color: #70757a; margin-top: 15px; line-height: 1.5; background: #f8f9fa; padding: 10px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h3><img src="icon.png" width="20" height="20">防剧透观剧伴侣</h3>
+  <div class="field">
+    <label class="title">剧名</label>
+    <input type="text" id="showName" placeholder="例如：Fallout">
+  </div>
+  <div class="field">
+    <label class="title">当前进度</label>
+    <input type="text" id="episode" placeholder="例如：S01E01">
+  </div>
+  <div class="field">
+    <label class="title">我的疑问</label>
+    <textarea id="userQuestion" rows="4" placeholder="问问 AI，避开剧透..."></textarea>
+  </div>
+
+  <label class="toggle-container">
+    <input type="checkbox" id="loreMode">
+    <span class="toggle-text">开启深度模式 (结合原著背景)</span>
+  </label>
+
+  <div class="btn-group">
+    <button id="copy-btn">生成并复制 Prompt</button>
+    <button id="jump-btn">前往网页版 Gemini</button>
+  </div>
+  
+  <div class="hint">
+    <b>使用说明：</b><br>
+    点击生成后，指令会自动复制。在 Gemini 网页版粘贴即可获得安全回答。
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

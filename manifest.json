@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "防剧透观剧伴侣",
+  "version": "1.0",
+  "permissions": ["sidePanel", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "打开防剧透侧边栏",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}
