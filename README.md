@@ -11,6 +11,7 @@
 ## 使用方法 ##
 未上传Chrome应用商店，请下载release目录中最新的TV_Companion.zip，解压后，在chrome://extensions/中打开“开发者模式”（右上角开关），加载未打包的扩展程序（左上角按键），选择之前解压目录后安装。
 
-
+## 界面 ##
+![界面截图](ScreenShot_v1.0.png)
 
 
